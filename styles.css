@@ -56,6 +56,10 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+.hamburger {
+    display: none;
+    z-index: 2;
+}
 /* nav links */
 .navlinks {
     display: flex;
@@ -452,8 +456,32 @@ footer {
     #navbar {
         padding: 2rem 1rem;
     }
+    .hamburger {
+        display: block;
+    }
     .navlinks {
         display: none;
+        position: absolute;
+        flex-direction: column;
+        gap: 2rem;
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: hsl(0, 0%, 100%);
+        padding: 1rem 6.5rem;
+        z-index: 5;
+    }
+    .navlinks .link {
+        color: hsl(213, 9%, 39%);
+    }
+    .show {
+        display: flex;
+    }
+    .contact {
+        background-color: hsl(51, 100%, 49%);
+    }
+    .contact:hover {
+        opacity: 0.5;
     }
     .heading header h1 {
         margin: 1rem auto 2rem;
